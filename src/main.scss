@@ -1,0 +1,77 @@
+@import "sass/bootstrap_reboot";
+@import "sass/breakpoints";
+
+// colors
+$white: hsl(0, 0%, 100%);
+$light-gray: hsl(212, 45%, 89%);
+$grayish-blue: hsl(220, 15%, 55%);
+$dark-blue: hsl(218, 44%, 22%);
+
+// font - Weights: 400, 700
+$main-font: "Outfit", sans-serif;
+
+$border: 20px;
+
+// mixin
+
+@mixin shadow {
+  box-shadow: 0px 10px 45px 12px rgba(0, 0, 0, 0.1);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: $light-gray;
+  .qrcode {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+    height: fit-content;
+    margin-top: 100px;
+    padding: 16px;
+    background-color: $white;
+    border-radius: $border;
+    @include shadow();
+    &__image {
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+    }
+    &__legend {
+      margin: 17px 0;
+      text-align: center;
+      font-family: $main-font;
+      h1 {
+        color: $dark-blue;
+        font-weight: 700;
+        line-height: 25px;
+      }
+      p {
+        margin-top: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        color: $grayish-blue;
+      }
+    }
+  }
+}
