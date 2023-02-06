@@ -1,6 +1,19 @@
 @import "sass/bootstrap_reboot";
 @import "sass/breakpoints";
 
+@use "sass:math";
+
+// Converts PX to REM
+// @access public
+// @param {string} $size - Value to be converted in PX.
+// @returns {string} - Returns REM string.
+// @example font-size: rem(24px);
+// @returns font-size: 1.5rem;
+@function rem($size) {
+  $remSize: math.div($size, 16px);
+  @return #{$remSize}rem;
+}
+
 // colors
 $white: hsl(0, 0%, 100%);
 $light-gray: hsl(212, 45%, 89%);

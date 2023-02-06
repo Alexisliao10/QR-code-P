@@ -42,6 +42,17 @@ realistic projects.
 I learned to create the HTML struture first then follow a design guide and
 finishing with custom styles.
 
+Never use the rem-font-hack (62.5%) because it can cause a lot of troubles like:
+
+- Potentially huge accessibility problems for anyone who changes their default
+  font size
+- Changing defaults is unexpected, so can confuse other developers (or even
+  yourself in the future)
+- Hard to maintain and even harder to remove later on
+- Conflicts with third-party code
+- Many engineering teams will look negatively on job applicants who use this in
+  their code, because they are aware of the issues it can cause.
+
 ```html
 <div class="card">
   <div class="qrcode">
@@ -112,6 +123,9 @@ to properly assign mixin and call them in the stylesheet.
 Shadow CSS generator - https://cssgenerator.org/box-shadow-css-generator.html -
 Using a shadoow generator let me visualized the shadow of the card more easily
 and helped a lot when try to match a shadow from the design card.
+
+Article about the use of font-size hack (62.5%) -
+https://fedmentor.dev/posts/rem-html-font-size-hack/
 
 ## Author
 
